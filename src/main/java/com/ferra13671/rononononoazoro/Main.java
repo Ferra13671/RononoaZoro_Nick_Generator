@@ -9,6 +9,12 @@ public class Main {
         try {
             System.out.println("Creating a new nickname for RononoaZoro...");
 
+            Path folderPath = Paths.get("Result");
+
+            if (!Files.exists(folderPath)) {
+                Files.createDirectory(folderPath);
+            }
+
             for (int a = 0; a < 2; a++) {
                 Path path = Paths.get("Result/RononoaZoro" + a + ".txt");
 
